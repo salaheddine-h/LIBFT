@@ -6,18 +6,17 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:10:27 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/06 14:52:31 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/08 14:55:08 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	j;
 	size_t	i;
+
 	if (*little == '\0')
 		return ((char *)big);
 	i = 0;

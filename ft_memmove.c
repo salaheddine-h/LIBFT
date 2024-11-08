@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 18:02:59 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/07 18:17:01 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/08 16:15:57 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (d > s)
 		while (len-- > 0)
 			d[len] = s[len];
-
 	else
 		while (i < len)
 		{
