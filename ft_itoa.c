@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:16:30 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/08 16:17:49 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/08 20:44:38 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,4 @@ char	*ft_itoa(int n)
 	if (sign > 0)
 		str[0] = '-';
 	return (str);
-}
-
-int	main(void)
-{
-	printf("%s\n", ft_itoa(  	 -2147483648));
 }

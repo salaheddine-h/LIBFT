@@ -6,7 +6,7 @@
 #    By: salhali <salhali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 13:59:56 by salhali           #+#    #+#              #
-#    Updated: 2024/11/08 15:01:57 by salhali          ###   ########.fr        #
+#    Updated: 2024/11/08 20:51:02 by salhali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all : $(NAME)
 $(NAME) : $(O_OBJ)
 	ar rcs $(NAME) $(O_OBJ)
 
-%.o :  %.c
+%.o :  %.c 
 	$(cc) $(FLAGS)  -c $< -o $@
 clean :  
 	rm -f $(O_OBJ)
@@ -37,4 +37,3 @@ fclean : clean
 
 re : fclean all 
 
-.SECONDARY : $(O_OBJ)
