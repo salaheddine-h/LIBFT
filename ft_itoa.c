@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-char	convert(int n)
+static char	convert(int n)
 {
 	return (n % 10 + '0');
 }
 
-int	count(int n)
+static int	count(int n)
 {
 	int	count;
 
@@ -32,30 +32,8 @@ int	count(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+static char	*re(int nbr, char *str, size_t count_len, size_t sign)
 {
-	char	*str;
-	size_t	sign;
-	size_t	count_len;
-	long	nbr;
-
-	nbr = n;
-	sign = 0;
-	if (nbr < 0)
-	{
-		nbr = -nbr;
-		sign++;
-	}
-	count_len = count(nbr);
-	while (n == 0)
-	{
-		str = malloc(2);
-		if (!str)
-			return (NULL);
-		str[0] = '0';
-		str[1] = '\0';
-		return (str);
-	}
 	str = (char *)malloc(count_len + sign + 1);
 	if (!str)
 		return (NULL);
@@ -69,4 +47,32 @@ char	*ft_itoa(int n)
 	if (sign > 0)
 		str[0] = '-';
 	return (str);
+}
+
+char	*ft_itoa(int nbr)
+{
+	char	*str;
+	size_t	sign;
+	size_t	count_len;
+
+	sign = 0;
+	str = NULL;
+	if (nbr == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		sign++;
+	}
+	count_len = count(nbr);
+	while (nbr == 0)
+	{
+		str = malloc(2);
+		if (!str)
+			return (NULL);
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+	return (re(nbr, str, count_len, sign));
 }
