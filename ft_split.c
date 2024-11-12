@@ -1,4 +1,4 @@
-٦/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
@@ -6,11 +6,11 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:13:11 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/08 14:35:32 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/12 10:29:46 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" ///// split == "salah,eddine,hali" --> salah eddine hali
+#include "libft.h"
 
 static int	is_sep(char a, char c)
 {
@@ -57,7 +57,7 @@ static void	*free_all(char **sp)
 	int	i;
 
 	i = 0;
-	while (sp[i] >= NULL)
+	while (sp[i] != NULL)
 	{
 		free(sp[i]);
 		i++;
@@ -68,8 +68,8 @@ static void	*free_all(char **sp)
 
 char	**ft_split(char const *s, char c)
 {
-	char **sp;
-	size_t i;
+	char	**sp;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	while (*s != '\0')
 	{
 		while (*s != '\0' && is_sep(*s, c))
-			i++;
+			s++;
 		if (*s && !is_sep(*s, c))
 		{
 			sp[i] = word_alloc(s, c);
@@ -88,10 +88,9 @@ char	**ft_split(char const *s, char c)
 				return (free_all(sp));
 			i++;
 			while (*s != '\0' && !is_sep(*s, c))
-			s++;
+				s++;
 		}
 	}
 	sp[i] = NULL;
-	return(sp) 
+	return (sp);
 }
-
