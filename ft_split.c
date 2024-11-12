@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h" ///// split == "salah,eddine,hali" --> salah eddine hali
+#include "libft.h" ///// split == "salah,eddine,hali" --> salah eddine hali
 
 static int	is_sep(char a, char c)
 {
@@ -52,21 +52,21 @@ static char	*word_alloc(const char *str, char c)
 	return (word);
 }
 
-static void	*free_all(char **sp, int index)
+static void	*free_all(char **sp)
 {
 	int	i;
 
 	i = 0;
-	while (index >= 0)
+	while (sp[i] >= NULL)
 	{
 		free(sp[i]);
-		i--;
+		i++;
 	}
 	free(sp);
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c) // s == string c == sepration
+char	**ft_split(char const *s, char c)
 {
 	char **sp;
 	size_t i;
@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c) // s == string c == sepration
 		{
 			sp[i] = word_alloc(s, c);
 			if (!sp[i])
-				return (free_all(sp, i));
+				return (free_all(sp));
 			i++;
 			while (*s != '\0' && !is_sep(*s, c))
 				;
@@ -93,4 +93,4 @@ char	**ft_split(char const *s, char c) // s == string c == sepration
 		}
 	}
 }
-*/
+
