@@ -92,5 +92,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		}
 	}
+	sp[i] = NULL;
+	return(sp) 
 }
 
