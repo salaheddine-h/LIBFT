@@ -6,19 +6,19 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:11:29 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/13 11:41:10 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/13 21:18:22 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	check(unsigned int a, char *str)
+/*void	check(unsigned int a, char *str)
 {
 	(void)a;
 	
 	if (*str >= 'a' && *str <= 'z')
 		*str-=32;
-}
+}*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
@@ -33,7 +33,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	str[] = "salaheddine";
 	
@@ -41,4 +41,4 @@ int	main(void)
 	ft_striteri(str, check);
 	printf("%s\n", str);
 	return(0);
-}
+}*/

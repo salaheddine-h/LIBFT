@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:25:56 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/04 17:42:43 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/13 21:39:20 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
+	if (fd < 0 || !s)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

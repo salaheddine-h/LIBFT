@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:12:06 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/13 21:04:16 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/13 21:19:30 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *resulting;
-	size_t s_len;
-	size_t i;
+	char	*resulting;
+	size_t	s_len;
+	size_t	i;
 
 	if (!s || !f)
 		return (NULL);

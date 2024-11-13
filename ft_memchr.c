@@ -6,12 +6,11 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:55:20 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/13 11:07:26 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/13 21:17:15 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,14 +28,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int	main()
-{
-	char	str[] = "salaheddine";
-	char	C = 'e';
-	size_t	i = 8;
-
-	ft_memchr(str, C, i);
-	printf("%s\n", str);
 }
