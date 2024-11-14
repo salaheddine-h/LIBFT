@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:13:11 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/12 10:29:46 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/14 19:03:06 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ static char	*word_alloc(const char *str, char c)
 	while (str[i] && !is_sep(str[i], c))
 		i++;
 	word = malloc((i + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
 	i = 0;
 	while (str[i] && !is_sep(str[i], c))
 	{

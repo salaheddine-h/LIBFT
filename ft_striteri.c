@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:11:29 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/13 21:18:22 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/14 19:11:03 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	char	str[] = "salaheddine";
 	
-
 	ft_striteri(str, check);
 	printf("%s\n", str);
 	return(0);
