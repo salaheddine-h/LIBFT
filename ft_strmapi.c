@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 20:12:06 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/13 21:19:30 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/16 19:46:51 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	resulting[i] = '\0';
 	return (resulting);
 }
+
+/*int	main(void)
+{
+	char	str[] = "sal";
+
+	printf("%s\n", ft_strmapi(str, check));
+}
+*/

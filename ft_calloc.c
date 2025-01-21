@@ -6,7 +6,7 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:02:35 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/14 19:19:54 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/16 20:10:17 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,4 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	ft_bzero(s, count * size);
 	return (s);
-}
-int	main()
-{
-	ft_calloc(0, 1988343888);
 }

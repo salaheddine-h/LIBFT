@@ -6,10 +6,11 @@
 /*   By: salhali <salhali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:10:27 by salhali           #+#    #+#             */
-/*   Updated: 2024/11/08 14:55:08 by salhali          ###   ########.fr       */
+/*   Updated: 2024/11/16 20:43:13 by salhali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -17,9 +18,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 	size_t	i;
 
+	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
-	i = 0;
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
@@ -33,3 +34,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+    #include <string.h>
+    #include <xlocale.h>
+int	main()
+{
+	char	oo[] = "salaheddine";
+	char	gg[] = "edd";
+	int	i = 1;
+
+	printf("%s\n", ft_strnstr(oo, gg, i));
+	printf("%s\n", strnstr(oo, gg, i));
+}
+*/
